@@ -1,0 +1,206 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+// Base typography styles
+
+// --------------------------------------------------------------------------
+// Headings
+// --------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+    @include heading-style;
+    margin-bottom: $spacing-4;
+}
+
+h1 {
+    font-size: $font-size-3xl;
+    
+    @include respond-to('md') {
+        font-size: $font-size-4xl;
+    }
+}
+
+h2 {
+    font-size: $font-size-2xl;
+    
+    @include respond-to('md') {
+        font-size: $font-size-3xl;
+    }
+}
+
+h3 {
+    font-size: $font-size-xl;
+    
+    @include respond-to('md') {
+        font-size: $font-size-2xl;
+    }
+}
+
+h4 {
+    font-size: $font-size-lg;
+    
+    @include respond-to('md') {
+        font-size: $font-size-xl;
+    }
+}
+
+h5 {
+    font-size: $font-size-md;
+    
+    @include respond-to('md') {
+        font-size: $font-size-lg;
+    }
+}
+
+h6 {
+    font-size: $font-size-sm;
+    
+    @include respond-to('md') {
+        font-size: $font-size-md;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Paragraphs
+// --------------------------------------------------------------------------
+
+p {
+    margin-bottom: $spacing-4;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Links
+// --------------------------------------------------------------------------
+
+a {
+    @include link-style;
+}
+
+// --------------------------------------------------------------------------
+// Strong & Bold
+// --------------------------------------------------------------------------
+
+strong,
+b {
+    font-weight: $font-weight-bold;
+    color: $text-color-dark;
+}
+
+// --------------------------------------------------------------------------
+// Emphasis & Italic
+// --------------------------------------------------------------------------
+
+em,
+i {
+    font-style: italic;
+}
+
+// --------------------------------------------------------------------------
+// Small Text
+// --------------------------------------------------------------------------
+
+small {
+    font-size: $font-size-sm;
+}
+
+// --------------------------------------------------------------------------
+// Code
+// --------------------------------------------------------------------------
+
+code,
+kbd,
+pre,
+samp {
+    font-family: $font-family-mono;
+    font-size: $font-size-sm;
+}
+
+code {
+    background-color: $color-gray-100;
+    padding: $spacing-1 $spacing-2;
+    border-radius: $border-radius-sm;
+    color: $color-primary;
+}
+
+pre {
+    background-color: $color-gray-800;
+    color: $color-white;
+    padding: $spacing-5;
+    border-radius: $border-radius;
+    overflow-x: auto;
+    margin-bottom: $spacing-5;
+    
+    code {
+        background: none;
+        padding: 0;
+        color: inherit;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Blockquote
+// --------------------------------------------------------------------------
+
+blockquote {
+    border-left: 4px solid $color-primary;
+    margin: $spacing-5 0;
+    padding: $spacing-4 $spacing-5;
+    font-style: italic;
+    background-color: $color-gray-100;
+    border-radius: 0 $border-radius $border-radius 0;
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Horizontal Rule
+// --------------------------------------------------------------------------
+
+hr {
+    border: none;
+    border-top: 1px solid $border-color;
+    margin: $spacing-6 0;
+    
+    &.major {
+        border-top-width: 2px;
+        margin: $spacing-8 0;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Lists (styled)
+// --------------------------------------------------------------------------
+
+.content-list {
+    ul, ol {
+        margin-bottom: $spacing-4;
+        padding-left: $spacing-5;
+    }
+    
+    ul {
+        list-style-type: disc;
+    }
+    
+    ol {
+        list-style-type: decimal;
+    }
+    
+    li {
+        margin-bottom: $spacing-2;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Selection
+// --------------------------------------------------------------------------
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

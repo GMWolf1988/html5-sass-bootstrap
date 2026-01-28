@@ -1,0 +1,122 @@
+// ==========================================================================
+// Forms
+// ==========================================================================
+// Custom form styles extending Bootstrap
+
+// --------------------------------------------------------------------------
+// Form Controls
+// --------------------------------------------------------------------------
+
+.form-control {
+    padding: $spacing-3 $spacing-4;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size-md;
+    color: $text-color-dark;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
+    
+    &::placeholder {
+        color: $text-color-light;
+    }
+    
+    &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
+}
+
+// --------------------------------------------------------------------------
+// Form Select
+// --------------------------------------------------------------------------
+
+.form-select {
+    padding: $spacing-3 $spacing-4;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size-md;
+    color: $text-color-dark;
+    
+    &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
+}
+
+// --------------------------------------------------------------------------
+// Form Labels
+// --------------------------------------------------------------------------
+
+.form-label {
+    font-weight: $font-weight-medium;
+    color: $text-color-dark;
+    margin-bottom: $spacing-2;
+}
+
+// --------------------------------------------------------------------------
+// Checkboxes & Radios
+// --------------------------------------------------------------------------
+
+.form-check {
+    padding-left: $spacing-6;
+    margin-bottom: $spacing-2;
+    
+    .form-check-input {
+        width: 18px;
+        height: 18px;
+        margin-top: 0.15em;
+        margin-left: -$spacing-6;
+        border: 2px solid $border-color;
+        
+        &:checked {
+            background-color: $color-primary;
+            border-color: $color-primary;
+        }
+        
+        &:focus {
+            box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+        }
+    }
+    
+    .form-check-label {
+        color: $text-color;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Textarea
+// --------------------------------------------------------------------------
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+// --------------------------------------------------------------------------
+// Contact Form
+// --------------------------------------------------------------------------
+
+.contact-form {
+    .row {
+        margin-bottom: 0;
+    }
+    
+    .btn {
+        margin-top: $spacing-3;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Input Group
+// --------------------------------------------------------------------------
+
+.input-group {
+    .form-control {
+        &:focus {
+            z-index: 2;
+        }
+    }
+    
+    .btn {
+        z-index: 1;
+    }
+}

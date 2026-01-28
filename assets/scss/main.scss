@@ -1,0 +1,47 @@
+// ==========================================================================
+// Main SASS Entry Point
+// ==========================================================================
+// This file imports all partials in the correct order.
+// Compile this file to generate main.css
+
+// --------------------------------------------------------------------------
+// 1. Abstracts - Variables, Functions, Mixins (no CSS output)
+// --------------------------------------------------------------------------
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// --------------------------------------------------------------------------
+// 2. Base - Reset, Typography, Base Styles
+// --------------------------------------------------------------------------
+@import 'base/reset';
+@import 'base/typography';
+
+// --------------------------------------------------------------------------
+// 3. Layout - Major structural components
+// --------------------------------------------------------------------------
+@import 'layout/wrapper';
+@import 'layout/sidebar';
+@import 'layout/main';
+@import 'layout/footer';
+
+// --------------------------------------------------------------------------
+// 4. Components - Reusable UI components
+// --------------------------------------------------------------------------
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/features';
+@import 'components/images';
+
+// --------------------------------------------------------------------------
+// 5. Sections - Page-specific sections
+// --------------------------------------------------------------------------
+@import 'sections/banner';
+@import 'sections/articles';
+@import 'sections/contact';
+@import 'sections/elements';
+
+// --------------------------------------------------------------------------
+// 6. Utilities - Utility classes
+// --------------------------------------------------------------------------
+@import 'utilities/helpers';

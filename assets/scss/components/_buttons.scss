@@ -1,0 +1,176 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+// Custom button styles extending Bootstrap
+
+// --------------------------------------------------------------------------
+// Actions List
+// --------------------------------------------------------------------------
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    &.stacked {
+        flex-direction: column;
+        
+        li {
+            width: 100%;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Primary Button Override
+// --------------------------------------------------------------------------
+
+.btn-primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    font-weight: $font-weight-medium;
+    padding: $spacing-3 $spacing-5;
+    letter-spacing: $letter-spacing-wide;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    border-radius: $border-radius;
+    transition: all $transition-fast;
+    
+    &:hover,
+    &:focus {
+        background-color: $color-primary-dark;
+        border-color: $color-primary-dark;
+        box-shadow: $shadow-md;
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+    
+    &.btn-lg {
+        padding: $spacing-4 $spacing-6;
+        font-size: $font-size-md;
+    }
+    
+    &.btn-sm {
+        padding: $spacing-2 $spacing-4;
+        font-size: $font-size-xs;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Secondary Button
+// --------------------------------------------------------------------------
+
+.btn-secondary {
+    background-color: $color-gray-700;
+    border-color: $color-gray-700;
+    font-weight: $font-weight-medium;
+    padding: $spacing-3 $spacing-5;
+    letter-spacing: $letter-spacing-wide;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    border-radius: $border-radius;
+    
+    &:hover,
+    &:focus {
+        background-color: $color-gray-800;
+        border-color: $color-gray-800;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Outline Buttons
+// --------------------------------------------------------------------------
+
+.btn-outline-primary {
+    color: $color-primary;
+    border-color: $color-primary;
+    font-weight: $font-weight-medium;
+    padding: $spacing-3 $spacing-5;
+    letter-spacing: $letter-spacing-wide;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    border-radius: $border-radius;
+    border-width: 2px;
+    
+    &:hover,
+    &:focus {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        color: $color-white;
+    }
+    
+    &.btn-sm {
+        padding: $spacing-2 $spacing-4;
+        font-size: $font-size-xs;
+    }
+}
+
+.btn-outline-secondary {
+    color: $color-gray-700;
+    border-color: $color-gray-300;
+    font-weight: $font-weight-medium;
+    padding: $spacing-3 $spacing-5;
+    letter-spacing: $letter-spacing-wide;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    border-radius: $border-radius;
+    border-width: 2px;
+    
+    &:hover,
+    &:focus {
+        background-color: $color-gray-700;
+        border-color: $color-gray-700;
+        color: $color-white;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Icon Buttons
+// --------------------------------------------------------------------------
+
+.btn-icon {
+    @include flex-center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: $border-radius;
+    
+    i {
+        font-size: $font-size-lg;
+    }
+    
+    &.btn-sm {
+        width: 36px;
+        height: 36px;
+        
+        i {
+            font-size: $font-size-md;
+        }
+    }
+    
+    &.btn-lg {
+        width: 56px;
+        height: 56px;
+        
+        i {
+            font-size: $font-size-xl;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Disabled State
+// --------------------------------------------------------------------------
+
+.btn.disabled,
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}

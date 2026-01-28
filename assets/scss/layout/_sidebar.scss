@@ -1,0 +1,254 @@
+// ==========================================================================
+// Sidebar
+// ==========================================================================
+// Sidebar navigation layout
+
+.sidebar {
+    width: $sidebar-width;
+    min-height: 100vh;
+    background-color: $bg-sidebar;
+    border-right: 1px solid $sidebar-border-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-index-sidebar;
+    transform: translateX(-100%);
+    transition: transform $transition-base;
+    
+    @include respond-to('lg') {
+        position: sticky;
+        transform: translateX(0);
+    }
+    
+    &.active {
+        transform: translateX(0);
+    }
+}
+
+.sidebar-inner {
+    height: 100vh;
+    overflow-y: auto;
+    padding: $sidebar-padding;
+    @include custom-scrollbar;
+    @include flex-column;
+}
+
+// --------------------------------------------------------------------------
+// Sidebar Header
+// --------------------------------------------------------------------------
+
+.sidebar-header {
+    margin-bottom: $spacing-6;
+    padding-bottom: $spacing-5;
+    border-bottom: 1px solid $sidebar-border-color;
+    
+    .logo {
+        display: block;
+        font-size: $font-size-2xl;
+        font-weight: $font-weight-extra-bold;
+        color: $heading-color;
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing-wide;
+        margin-bottom: $spacing-2;
+        
+        &:hover {
+            color: $color-primary;
+        }
+    }
+    
+    .tagline {
+        font-size: $font-size-sm;
+        color: $text-color-light;
+        margin: 0;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Sidebar Search
+// --------------------------------------------------------------------------
+
+.sidebar-search {
+    margin-bottom: $spacing-5;
+    
+    .search-form {
+        .input-group {
+            .form-control {
+                border-color: $border-color;
+                border-radius: $border-radius 0 0 $border-radius;
+                
+                &:focus {
+                    border-color: $color-primary;
+                    box-shadow: none;
+                }
+            }
+            
+            .btn-search {
+                background-color: $color-primary;
+                border: 1px solid $color-primary;
+                color: $color-white;
+                border-radius: 0 $border-radius $border-radius 0;
+                padding: $spacing-2 $spacing-4;
+                
+                &:hover {
+                    background-color: $color-primary-dark;
+                    border-color: $color-primary-dark;
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Sidebar Navigation
+// --------------------------------------------------------------------------
+
+.sidebar-nav {
+    flex: 1;
+    
+    .nav {
+        .nav-item {
+            margin-bottom: $spacing-1;
+            
+            &.has-submenu {
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    
+                    .bi-chevron-down {
+                        transition: transform $transition-fast;
+                    }
+                }
+                
+                &:has(.submenu.show) .bi-chevron-down {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: $spacing-3;
+            padding: $spacing-3 $spacing-4;
+            color: $text-color;
+            border-radius: $border-radius;
+            font-weight: $font-weight-medium;
+            transition: all $transition-fast;
+            
+            i {
+                font-size: $font-size-lg;
+                width: 24px;
+            }
+            
+            &:hover {
+                color: $color-primary;
+                background-color: rgba($color-primary, 0.05);
+            }
+            
+            &.active {
+                color: $color-primary;
+                background-color: rgba($color-primary, 0.1);
+            }
+        }
+    }
+    
+    .submenu {
+        margin-left: $spacing-6;
+        padding-left: $spacing-4;
+        border-left: 2px solid $border-color;
+        margin-top: $spacing-2;
+        
+        li {
+            margin-bottom: $spacing-1;
+            
+            a {
+                display: block;
+                padding: $spacing-2 $spacing-3;
+                color: $text-color;
+                font-size: $font-size-sm;
+                border-radius: $border-radius-sm;
+                transition: all $transition-fast;
+                
+                &:hover {
+                    color: $color-primary;
+                    background-color: rgba($color-primary, 0.05);
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Sidebar Footer
+// --------------------------------------------------------------------------
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: $spacing-5;
+    border-top: 1px solid $sidebar-border-color;
+    
+    p {
+        font-size: $font-size-xs;
+        color: $text-color-light;
+        margin-bottom: $spacing-1;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
+        a {
+            color: $color-primary;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Sidebar Toggle (Mobile)
+// --------------------------------------------------------------------------
+
+.sidebar-toggle {
+    @include button-reset;
+    position: fixed;
+    top: $spacing-4;
+    left: $spacing-4;
+    z-index: $z-index-sidebar + 1;
+    width: 48px;
+    height: 48px;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: $border-radius;
+    @include flex-center;
+    @include box-shadow($shadow-md);
+    
+    i {
+        font-size: $font-size-2xl;
+    }
+    
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+}
+
+// Overlay when sidebar is open on mobile
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color-black, 0.5);
+    z-index: $z-index-sidebar - 1;
+    
+    &.active {
+        display: block;
+    }
+    
+    @include respond-to('lg') {
+        display: none !important;
+    }
+}

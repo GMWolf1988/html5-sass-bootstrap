@@ -1,0 +1,127 @@
+// ==========================================================================
+// Elements Page
+// ==========================================================================
+// Styles specific to the elements showcase page
+
+.elements-section {
+    @include section-padding;
+    padding-top: 0;
+    
+    &:first-of-type {
+        padding-top: $spacing-6;
+    }
+    
+    > h2 {
+        @include heading-style;
+        font-size: $font-size-2xl;
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing-wide;
+        padding-bottom: $spacing-3;
+        border-bottom: 2px solid $color-primary;
+        display: inline-block;
+        margin-bottom: $spacing-5;
+    }
+    
+    h3, h4, h5, h6 {
+        margin-top: $spacing-5;
+        margin-bottom: $spacing-3;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Alternate Lists
+// --------------------------------------------------------------------------
+
+.list-alt {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        padding: $spacing-3 0;
+        border-bottom: 1px solid $border-color;
+        
+        &:first-child {
+            border-top: 1px solid $border-color;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Icons List
+// --------------------------------------------------------------------------
+
+.icons-list {
+    display: flex;
+    gap: $spacing-3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: $border-radius;
+            background-color: $color-gray-100;
+            color: $text-color;
+            transition: all $transition-fast;
+            
+            i {
+                font-size: $font-size-xl;
+            }
+            
+            &:hover {
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Tables
+// --------------------------------------------------------------------------
+
+.table {
+    th {
+        font-weight: $font-weight-bold;
+        color: $heading-color;
+        text-transform: uppercase;
+        font-size: $font-size-sm;
+        letter-spacing: $letter-spacing-wide;
+        border-bottom-width: 2px;
+    }
+    
+    td {
+        vertical-align: middle;
+    }
+    
+    tfoot {
+        td {
+            font-weight: $font-weight-bold;
+            color: $heading-color;
+            border-top-width: 2px;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+// Blockquote Enhanced
+// --------------------------------------------------------------------------
+
+.blockquote {
+    font-size: $font-size-lg;
+    
+    &-footer {
+        margin-top: $spacing-3;
+        font-size: $font-size-sm;
+        color: $text-color-light;
+    }
+}

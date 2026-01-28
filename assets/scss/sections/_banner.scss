@@ -1,0 +1,81 @@
+// ==========================================================================
+// Banner Section
+// ==========================================================================
+// Hero/banner section styles
+
+.banner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: $spacing-6;
+    padding: $spacing-8 0;
+    border-bottom: 1px solid $border-color;
+    
+    @include respond-to('lg') {
+        flex-direction: row;
+        align-items: center;
+        gap: $spacing-8;
+    }
+    
+    .content {
+        flex: 1;
+        
+        header {
+            margin-bottom: $spacing-5;
+            
+            h1 {
+                @include heading-style;
+                font-size: $font-size-2xl;
+                margin-bottom: $spacing-3;
+                
+                strong {
+                    color: $color-primary;
+                    display: block;
+                }
+                
+                @include respond-to('md') {
+                    font-size: $font-size-3xl;
+                }
+                
+                @include respond-to('lg') {
+                    font-size: $font-size-4xl;
+                }
+            }
+            
+            p {
+                font-size: $font-size-lg;
+                color: $text-color-light;
+                text-transform: uppercase;
+                letter-spacing: $letter-spacing-wide;
+                margin: 0;
+            }
+        }
+        
+        > p {
+            font-size: $font-size-md;
+            color: $text-color;
+            margin-bottom: $spacing-5;
+            
+            @include respond-to('md') {
+                font-size: $font-size-lg;
+            }
+        }
+        
+        .actions {
+            margin-top: $spacing-5;
+        }
+    }
+    
+    .banner-image {
+        flex: 0 0 auto;
+        
+        @include respond-to('lg') {
+            flex: 0 0 40%;
+        }
+        
+        img {
+            width: 100%;
+            border-radius: $border-radius;
+            @include box-shadow($shadow-lg);
+        }
+    }
+}

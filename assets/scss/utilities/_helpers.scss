@@ -1,0 +1,101 @@
+// ==========================================================================
+// Utilities
+// ==========================================================================
+// Utility/helper classes
+
+// --------------------------------------------------------------------------
+// Text Utilities
+// --------------------------------------------------------------------------
+
+.text-primary {
+    color: $color-primary !important;
+}
+
+.text-muted {
+    color: $text-color-light !important;
+}
+
+.text-dark {
+    color: $text-color-dark !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-wide;
+}
+
+// --------------------------------------------------------------------------
+// Spacing Utilities
+// --------------------------------------------------------------------------
+
+.mt-section {
+    margin-top: $section-margin;
+}
+
+.mb-section {
+    margin-bottom: $section-margin;
+}
+
+.pt-section {
+    padding-top: $section-padding;
+}
+
+.pb-section {
+    padding-bottom: $section-padding;
+}
+
+// --------------------------------------------------------------------------
+// Display Utilities
+// --------------------------------------------------------------------------
+
+.sr-only {
+    @include visually-hidden;
+}
+
+// --------------------------------------------------------------------------
+// Border Utilities
+// --------------------------------------------------------------------------
+
+.border-primary {
+    border-color: $color-primary !important;
+}
+
+.rounded-lg {
+    border-radius: $border-radius-lg !important;
+}
+
+// --------------------------------------------------------------------------
+// Shadow Utilities
+// --------------------------------------------------------------------------
+
+.shadow-hover {
+    @include hover-lift;
+}
+
+// --------------------------------------------------------------------------
+// Responsive Visibility
+// --------------------------------------------------------------------------
+
+@include respond-below('lg') {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@include respond-to('lg') {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Clearfix
+// --------------------------------------------------------------------------
+
+.clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

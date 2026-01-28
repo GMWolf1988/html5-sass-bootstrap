@@ -1,0 +1,66 @@
+// ==========================================================================
+// Cards
+// ==========================================================================
+// Post cards and article cards
+
+.post-card {
+    height: 100%;
+    
+    .post-image {
+        display: block;
+        overflow: hidden;
+        border-radius: $border-radius;
+        margin-bottom: $spacing-4;
+        @include aspect-ratio(16, 10);
+        
+        img {
+            @include image-cover;
+            transition: transform $transition-slow;
+        }
+        
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+    
+    h3 {
+        @include heading-style;
+        font-size: $font-size-xl;
+        margin-bottom: $spacing-3;
+        
+        a {
+            color: inherit;
+            
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+    
+    p {
+        color: $text-color;
+        margin-bottom: $spacing-4;
+        @include text-clamp(3);
+    }
+    
+    .actions {
+        margin-top: auto;
+    }
+}
+
+// --------------------------------------------------------------------------
+// Card Grid
+// --------------------------------------------------------------------------
+
+.card-grid {
+    display: grid;
+    gap: $spacing-5;
+    
+    @include respond-to('md') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to('lg') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
