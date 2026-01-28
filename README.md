@@ -152,6 +152,8 @@ $section-padding: 3rem;
 - Original design: [HTML5 UP](https://html5up.net)
 - Bootstrap: [Bootstrap 5](https://getbootstrap.com)
 - Icons: [Bootstrap Icons](https://icons.getbootstrap.com)
+- HTML5 UP Editorial: https://html5up.net/editorial
+- Images: https://source.unsplash.com
 
 ## License
 
