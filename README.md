@@ -5,10 +5,10 @@ I wanted to test my skills and to see if i could match the current template.
 
 ## Features
 
-- 🎨 Clean, magazine-style design
+- 🎨 Clean, magasine-style design
 - 📱 Fully responsive with Bootstrap 5
-- 🎭 SASS/SCSS architecture for easy customization
-- ⚡ Minimal, organized codebase
+- 🎭 SASS/SCSS architecture for easy customisation
+- ⚡ Minimal, organised codebase
 - 🔧 Modular JavaScript
 
 ## Project Structure
