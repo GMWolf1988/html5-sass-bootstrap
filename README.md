@@ -1,4 +1,4 @@
-# HTML5, SASS, Bootstrap Editorial Theme
+# HTML5, Sass, Bootstrap Editorial Theme
 
 A responsive HTML5, Sass, Bootstrap theme inspired by the [HTML5 UP Editorial](https://html5up.net/editorial) template that i developed. 
 I wanted to test my skills and to see if i could match the current template.
@@ -66,7 +66,6 @@ html5-bootstrap/
     │       └── forms.js
     │
     └── images/             # Image assets
-        └── (add your images here)
 ```
 
 ## Getting Started
@@ -106,11 +105,11 @@ npm run sass:compressed
 npm run serve
 ```
 
-## Customization
+## Customisation
 
-### Colors
+### Colours
 
-Edit the color variables in `assets/scss/abstracts/_variables.scss`:
+Edit the colour variables in `assets/scss/abstracts/_variables.scss`:
 
 ```scss
 // Brand Colors
