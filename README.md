@@ -11,7 +11,9 @@ I wanted to test my skills and to see if i could match the current template.
 - ⚡ Minimal, organised codebase
 - 🔧 Modular JavaScript
 
-<img width="2517" height="1266" alt="image" src="https://github.com/user-attachments/assets/b2e5c4a6-a0ee-4223-8f97-6b758bb4323f" />
+<img width="2546" height="1260" alt="image" src="https://github.com/user-attachments/assets/eb15aa7f-0c59-433a-8233-d0267ddf6b29" />
+<img width="1747" height="1055" alt="Screenshot 2026-02-13 114811" src="https://github.com/user-attachments/assets/82bf5fd4-83b5-47e7-ae0a-a276e7f6dd31" />
+<img width="1693" height="1045" alt="image" src="https://github.com/user-attachments/assets/e140432c-5b3b-4123-ae2f-e71536fdbd49" />
 
 ## Project Structure
 
