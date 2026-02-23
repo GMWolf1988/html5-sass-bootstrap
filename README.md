@@ -1,4 +1,4 @@
-# HTML5, Sass, Bootstrap Editorial Theme
+# HTML5, SCSS, Bootstrap Editorial Theme
 
 A responsive HTML5, SCSS, Bootstrap theme inspired by the [HTML5 UP Editorial](https://html5up.net/editorial) template that i developed. 
 I wanted to test my skills and to see if i could match the current template.
